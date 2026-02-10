@@ -9,8 +9,9 @@ env:
   DOCKER_IMAGE_NAME: seve-rin-g-azure-ttt
   AZURE_WEBAPP_NAME: seve-rin-g-ttt-app
 
-jobs:
+jobs:  
   build:
+    permissions: write-all
     if: contains(github.event.pull_request.labels.*.name, 'stage')
 
     runs-on: ubuntu-latest
